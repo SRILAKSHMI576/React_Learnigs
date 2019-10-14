@@ -1,10 +1,11 @@
 import React from 'react';
+import SpaceX from './SpaceX/SpaceX';
 
 
 function App() {
   return (
     <div className="App">
-     <h1>Hello world</h1>
+     <SpaceX />
     </div>
   );
 }
