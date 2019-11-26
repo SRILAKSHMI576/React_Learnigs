@@ -3,6 +3,7 @@ import SpaceX from "./Components/SpaceX";
 import PropsExample from "./Components/PropsEx1";
 import ClassPropsEx from "./Components/ClassPropsEx";
 import Person from "./UdemyCourse/Person";
+import ClassEx from "./UdemyCourse/ClassEx";
 
 function App() {
   return (
@@ -34,9 +35,10 @@ function App() {
       <p>This is children Component</p>
       <ClassPropsEx name="Division: " div={12 / 6} />
       <p>This is children Component</p> */}
+      {/* <Person />
       <Person />
-      <Person />
-      <Person />
+      <Person /> */}
+      <ClassEx />
     </div>
   );
 }
