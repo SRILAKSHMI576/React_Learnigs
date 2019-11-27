@@ -9,9 +9,9 @@ import PersonDetails from "./UdemyCourse/PersonDetails";
 class App extends React.Component {
   state = {
     persons: [
-      { name: "sri", age: 30 },
-      { name: "laxmi", age: 45 },
-      { name: "max", age: 31 }
+      { id: "asf1", name: "sri", age: 30 },
+      { id: "abcse", name: "laxmi", age: 45 },
+      { id: "fghe", name: "max", age: 31 }
     ],
     otherState: "some other value",
     showPersons: false
@@ -25,7 +25,7 @@ class App extends React.Component {
       ]
     });
   };
-  nameChangeHandler = event => {
+  nameChangeHandler = (event, id) => {
     this.setState({
       persons: [
         { name: event.target.value, age: 60 },
@@ -44,6 +44,12 @@ class App extends React.Component {
       showPersons: true
     });
   };
+
+  deletePersonHandler = personIndex => {
+    const persons = [...this.state.persons];
+    persons.splice(personIndex, 1);
+    this.setState({ persons: persons });
+  };
   render() {
     const style = {
       backgroundColor: "red",
@@ -58,12 +64,14 @@ class App extends React.Component {
     if (this.state.showPersons) {
       persons = (
         <div>
-          {this.state.persons.map(person => {
+          {this.state.persons.map((person, index) => {
             return (
               <PersonDetails
+                click={() => this.deletePersonHandler(index)}
                 name={person.name}
                 age={person.age}
-                change={this.state.nameChangeHandler}
+                key={person.id}
+                change={this.nameChangeHandler}
               />
             );
           })}
