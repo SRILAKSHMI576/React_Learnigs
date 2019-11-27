@@ -7,7 +7,7 @@ class PersonDetails extends React.Component {
         <p>
           I am {this.props.name} and I am {this.props.age} years old!
         </p>
-        <p>{this.props.children}</p>
+        <p onClick={this.props.click}>{this.props.children}</p>
       </div>
     );
   }
