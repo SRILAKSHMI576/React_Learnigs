@@ -8,7 +8,7 @@ import PersonDetails from "./UdemyCourse/PersonDetails";
 
 class App extends React.Component {
   state = {
-    person: [
+    persons: [
       { name: "sri", age: 30 },
       { name: "laxmi", age: 45 },
       { name: "max", age: 31 }
@@ -18,7 +18,7 @@ class App extends React.Component {
   };
   switchHandler = switchName => {
     this.setState({
-      person: [
+      persons: [
         { name: switchName, age: 60 },
         { name: "laxmi", age: 45 },
         { name: "max", age: 35 }
@@ -27,7 +27,7 @@ class App extends React.Component {
   };
   nameChangeHandler = event => {
     this.setState({
-      person: [
+      persons: [
         { name: event.target.value, age: 60 },
         { name: "laxmi", age: 45 },
         { name: "max", age: 35 }
@@ -58,22 +58,15 @@ class App extends React.Component {
     if (this.state.showPersons) {
       persons = (
         <div>
-          <PersonDetails
-            name={this.state.person[0].name}
-            age={this.state.person[0].age}
-          />
-          <PersonDetails
-            name={this.state.person[1].name}
-            age={this.state.person[1].age}
-            click={this.nameChangeHandler.bind(this, "Srilakshmi")}
-            change={this.nameChangeHandler}
-          >
-            My hobbies: racing
-          </PersonDetails>
-          <PersonDetails
-            name={this.state.person[2].name}
-            age={this.state.person[2].age}
-          />
+          {this.state.persons.map(person => {
+            return (
+              <PersonDetails
+                name={person.name}
+                age={person.age}
+                change={this.state.nameChangeHandler}
+              />
+            );
+          })}
         </div>
       );
     }
@@ -111,6 +104,7 @@ class App extends React.Component {
         <button style={style} onClick={this.togglePersonsHandler}>
           switch name
         </button>
+
         {persons}
       </div>
     );
