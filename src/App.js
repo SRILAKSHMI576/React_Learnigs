@@ -1,9 +1,9 @@
 import React from "react";
-import SpaceX from "./Components/SpaceX";
-import PropsExample from "./Components/PropsEx1";
-import ClassPropsEx from "./Components/ClassPropsEx";
-import Person from "./UdemyCourse/Person";
-import ClassEx from "./UdemyCourse/ClassEx";
+// import SpaceX from "./Components/SpaceX";
+// import PropsExample from "./Components/PropsEx1";
+// import ClassPropsEx from "./Components/ClassPropsEx";
+// import Person from "./UdemyCourse/Person";
+// import ClassEx from "./UdemyCourse/ClassEx";
 import PersonDetails from "./UdemyCourse/PersonDetails";
 
 class App extends React.Component {
@@ -13,7 +13,8 @@ class App extends React.Component {
       { name: "laxmi", age: 45 },
       { name: "max", age: 31 }
     ],
-    otherState: "some other value"
+    otherState: "some other value",
+    showPersons: false
   };
   switchHandler = switchName => {
     this.setState({
@@ -33,7 +34,21 @@ class App extends React.Component {
       ]
     });
   };
+
+  togglePersonsHandler = () => {
+    const doesShow = this.state.showPersons;
+    this.setState({
+      showPersons: !doesShow
+    });
+  };
   render() {
+    const style = {
+      backgroundColor: "red",
+      font: "inherit",
+      border: "1px solid blue",
+      padding: "18px",
+      cursor: "pointer"
+    };
     return (
       <div className="App">
         {/* <SpaceX /> */}
@@ -65,25 +80,29 @@ class App extends React.Component {
       <Person />
       <Person /> */}
         {/* <ClassEx name1="REACT" /> */}
-        <button onClick={this.switchHandler.bind(this, "Srilakshmi")}>
+        <button style={style} onClick={this.togglePersonsHandler}>
           switch name
         </button>
-        <PersonDetails
-          name={this.state.person[0].name}
-          age={this.state.person[0].age}
-        />
-        <PersonDetails
-          name={this.state.person[1].name}
-          age={this.state.person[1].age}
-          click={this.switchHandler.bind(this, "SRILAKSHMI")}
-          change={this.nameChangeHandler}
-        >
-          My hobbies: racing
-        </PersonDetails>
-        <PersonDetails
-          name={this.state.person[2].name}
-          age={this.state.person[2].age}
-        />
+        {this.state.showPersons === true ? (
+          <div>
+            <PersonDetails
+              name={this.state.person[0].name}
+              age={this.state.person[0].age}
+            />
+            <PersonDetails
+              name={this.state.person[1].name}
+              age={this.state.person[1].age}
+              click={this.nameChangeHandler.bind(this, "Srilakshmi")}
+              change={this.nameChangeHandler}
+            >
+              My hobbies: racing
+            </PersonDetails>
+            <PersonDetails
+              name={this.state.person[2].name}
+              age={this.state.person[2].age}
+            />
+          </div>
+        ) : null}
       </div>
     );
   }
