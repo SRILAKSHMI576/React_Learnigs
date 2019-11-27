@@ -43,6 +43,7 @@ class ClassEx extends React.Component {
         <br />
         name: {this.state.person[2].name} , age: {this.state.person[2].age}
         <br />
+        {this.props.name1} <br />
         <label onMouseOver={this.changeColor} style={style}>
           {this.state.otherDetail}
         </label>
