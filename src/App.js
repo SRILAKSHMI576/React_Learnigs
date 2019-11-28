@@ -5,7 +5,8 @@ import React from "react";
 // import Person from "./UdemyCourse/Person";
 // import ClassEx from "./UdemyCourse/ClassEx";
 import PersonDetails from "./UdemyCourse/PersonDetails";
-import Result from "./UdemyAssignment1/Result";
+// import Result from "./UdemyAssignment1/Result";
+import SecondResult from "./UdemyAssignment2/SecondResult";
 
 class App extends React.Component {
   state = {
@@ -126,7 +127,8 @@ class App extends React.Component {
         </button>
 
         {persons} */}
-        <Result />
+        {/* <Result /> */}
+        <SecondResult />
       </div>
     );
   }
