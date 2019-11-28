@@ -5,6 +5,7 @@ import React from "react";
 // import Person from "./UdemyCourse/Person";
 // import ClassEx from "./UdemyCourse/ClassEx";
 import PersonDetails from "./UdemyCourse/PersonDetails";
+import Result from "./UdemyAssignment1/Result";
 
 class App extends React.Component {
   state = {
@@ -26,12 +27,21 @@ class App extends React.Component {
     });
   };
   nameChangeHandler = (event, id) => {
+    const personIndex = this.state.persons.findIndex(p => {
+      return p.id === id;
+    });
+
+    const person = {
+      ...this.state.persons[personIndex]
+    };
+    person.name = event.target.value;
+
+    const persons = [...this.state.persons];
+    persons[personIndex] = person;
+    // const person = Object.assign({}, this.state.persons[personIndex]);
+
     this.setState({
-      persons: [
-        { name: event.target.value, age: 60 },
-        { name: "laxmi", age: 45 },
-        { name: "max", age: 35 }
-      ]
+      persons: persons
     });
   };
 
@@ -52,7 +62,8 @@ class App extends React.Component {
   };
   render() {
     const style = {
-      backgroundColor: "red",
+      backgroundColor: "green",
+      color: "white",
       font: "inherit",
       border: "1px solid blue",
       padding: "18px",
@@ -71,12 +82,13 @@ class App extends React.Component {
                 name={person.name}
                 age={person.age}
                 key={person.id}
-                change={this.nameChangeHandler}
+                change={event => this.nameChangeHandler(event, person.id)}
               />
             );
           })}
         </div>
       );
+      style.backgroundColor = "red";
     }
     return (
       <div className="App">
@@ -109,11 +121,12 @@ class App extends React.Component {
       <Person />
       <Person /> */}
         {/* <ClassEx name1="REACT" /> */}
-        <button style={style} onClick={this.togglePersonsHandler}>
+        {/* <button style={style} onClick={this.togglePersonsHandler}>
           switch name
         </button>
 
-        {persons}
+        {persons} */}
+        <Result />
       </div>
     );
   }
