@@ -6,7 +6,8 @@ import React from "react";
 // import ClassEx from "./UdemyCourse/ClassEx";
 import PersonDetails from "./UdemyCourse/PersonDetails";
 import DateNow from "./Components/dateNow";
-import ButtonSwitch from "./Components/ButtonSwitch";
+// import ButtonSwitch from "./Components/ButtonSwitch";
+import LogInControls from "./Components/LogInControl";
 
 // import Result from "./UdemyAssignment1/Result";
 // import SecondResult from "./UdemyAssignment2/SecondResult";
@@ -127,7 +128,8 @@ class App extends React.Component {
         </button>
         {persons}
         <DateNow />
-        <ButtonSwitch />
+        {/* <ButtonSwitch /> */}
+        <LogInControls />
         {/* <Result /> */}
         {/* <SecondResult /> */}
       </div>
