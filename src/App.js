@@ -7,7 +7,9 @@ import React from "react";
 import PersonDetails from "./UdemyCourse/PersonDetails";
 import DateNow from "./Components/dateNow";
 // import ButtonSwitch from "./Components/ButtonSwitch";
-import LogInControls from "./Components/LogInControl";
+// import LogInControls from "./Components/LogInControl";
+
+import HiddenButtonLogic from "./HiddenTask/HiddenButtonLogic";
 
 // import Result from "./UdemyAssignment1/Result";
 // import SecondResult from "./UdemyAssignment2/SecondResult";
@@ -127,11 +129,13 @@ class App extends React.Component {
           switch name
         </button>
         {persons}
-        <DateNow />
+        {/* <DateNow /> */}
         {/* <ButtonSwitch /> */}
-        <LogInControls />
+        {/* <LogInControls /> */}
         {/* <Result /> */}
         {/* <SecondResult /> */}
+
+        <HiddenButtonLogic />
       </div>
     );
   }
