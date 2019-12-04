@@ -1,6 +1,4 @@
 import React from "react";
-import LogOut from "./LogOut";
-import LogIn from "./LogIn";
 
 class LogInControls extends React.Component {
   state = {
@@ -21,10 +19,21 @@ class LogInControls extends React.Component {
     const isLoggedIn = this.state.isLoggedIn;
     let message;
     if (isLoggedIn) {
-      message = <LogOut onClick={this.handleLogoutClick} />;
+      message = (
+        <div>
+          <button onClick={this.handleLogoutClick}>LogOut</button>
+          <p>Welcome Back</p>
+        </div>
+      );
     } else {
-      message = <LogIn onClick={this.handleLogInClick} />;
+      message = (
+        <div>
+          <button onClick={this.handleLogInClick}>LogIn</button>
+          <p>Please Sign Up</p>
+        </div>
+      );
     }
+
     return <div>{message}</div>;
   }
 }
