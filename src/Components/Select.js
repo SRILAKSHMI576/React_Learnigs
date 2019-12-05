@@ -28,6 +28,7 @@ class OnSelect extends React.Component {
             </select>
           </label>
           <input type="submit" value="Submit" />
+          <input type="file" />
         </form>
       </div>
     );
