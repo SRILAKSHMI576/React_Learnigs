@@ -8,6 +8,7 @@ class Form extends React.Component {
   changeInput = event => {
     this.setState({
       name: event.target.value
+      // name: event.target.value.toUpperCase()
     });
   };
 
