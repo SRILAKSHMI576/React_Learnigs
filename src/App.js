@@ -10,10 +10,10 @@ import PersonDetails from "./UdemyCourse/PersonDetails";
 // import LogInControls from "./Components/LogInControl";
 
 import HiddenButtonLogic from "./HiddenTask/HiddenButtonLogic";
-import Form from "./Components/Form";
-import OnSelect from "./Components/Select";
-import InputFile from "./Components/InputFile";
-import BoilingVerdict from "./Temperature/BoilingVerdict";
+import Calculator from "./Temperature/Calculator";
+// import Form from "./Components/Form";
+// import OnSelect from "./Components/Select";
+// import InputFile from "./Components/InputFile";
 
 // import Result from "./UdemyAssignment1/Result";
 // import SecondResult from "./UdemyAssignment2/SecondResult";
@@ -141,8 +141,9 @@ class App extends React.Component {
         {/* <Form /> */}
         {/* <OnSelect /> */}
         {/* <InputFile /> */}
-        <BoilingVerdict />
+
         <HiddenButtonLogic />
+        <Calculator />
       </div>
     );
   }
