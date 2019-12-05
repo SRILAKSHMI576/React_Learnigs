@@ -5,11 +5,12 @@ import React from "react";
 // import Person from "./UdemyCourse/Person";
 // import ClassEx from "./UdemyCourse/ClassEx";
 import PersonDetails from "./UdemyCourse/PersonDetails";
-import DateNow from "./Components/dateNow";
+// import DateNow from "./Components/dateNow";
 // import ButtonSwitch from "./Components/ButtonSwitch";
 // import LogInControls from "./Components/LogInControl";
 
 import HiddenButtonLogic from "./HiddenTask/HiddenButtonLogic";
+import Form from "./Components/Form";
 
 // import Result from "./UdemyAssignment1/Result";
 // import SecondResult from "./UdemyAssignment2/SecondResult";
@@ -134,7 +135,7 @@ class App extends React.Component {
         {/* <LogInControls /> */}
         {/* <Result /> */}
         {/* <SecondResult /> */}
-
+        <Form />
         <HiddenButtonLogic />
       </div>
     );

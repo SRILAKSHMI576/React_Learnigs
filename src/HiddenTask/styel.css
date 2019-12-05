@@ -6,3 +6,8 @@
   font-size: 14pt;
   color: white;
 }
+
+button {
+  height: 40px;
+  width: 200px;
+}
