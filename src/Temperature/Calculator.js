@@ -3,7 +3,7 @@ import BoilingVerdict from "./BoilingVerdict";
 
 export class Calculator extends Component {
   state = {
-    number: "200"
+    temperature: "200"
   };
 
   handleChange = event => {
