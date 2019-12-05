@@ -12,6 +12,7 @@ import PersonDetails from "./UdemyCourse/PersonDetails";
 import HiddenButtonLogic from "./HiddenTask/HiddenButtonLogic";
 import Form from "./Components/Form";
 import OnSelect from "./Components/Select";
+import InputFile from "./Components/InputFile";
 
 // import Result from "./UdemyAssignment1/Result";
 // import SecondResult from "./UdemyAssignment2/SecondResult";
@@ -137,7 +138,8 @@ class App extends React.Component {
         {/* <Result /> */}
         {/* <SecondResult /> */}
         {/* <Form /> */}
-        <OnSelect />
+        {/* <OnSelect /> */}
+        <InputFile />
         <HiddenButtonLogic />
       </div>
     );
