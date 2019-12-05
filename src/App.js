@@ -13,6 +13,7 @@ import HiddenButtonLogic from "./HiddenTask/HiddenButtonLogic";
 import Form from "./Components/Form";
 import OnSelect from "./Components/Select";
 import InputFile from "./Components/InputFile";
+import BoilingVerdict from "./Temperature/BoilingVerdict";
 
 // import Result from "./UdemyAssignment1/Result";
 // import SecondResult from "./UdemyAssignment2/SecondResult";
@@ -139,7 +140,8 @@ class App extends React.Component {
         {/* <SecondResult /> */}
         {/* <Form /> */}
         {/* <OnSelect /> */}
-        <InputFile />
+        {/* <InputFile /> */}
+        <BoilingVerdict />
         <HiddenButtonLogic />
       </div>
     );
