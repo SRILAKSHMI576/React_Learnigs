@@ -31,11 +31,7 @@ export class TemperatureConversions extends Component {
       <div>
         <fieldset>
           <legend>Enter the temperature in Celcius: </legend>
-          <input
-            type="text"
-            value={this.state.temperature}
-            onChange={this.handleChange}
-          />
+          <input type="text" value={temperature} onChange={this.handleChange} />
         </fieldset>
 
         <fieldset>
