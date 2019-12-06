@@ -10,9 +10,8 @@ import PersonDetails from "./UdemyCourse/PersonDetails";
 // import LogInControls from "./Components/LogInControl";
 
 import HiddenButtonLogic from "./HiddenTask/HiddenButtonLogic";
-// import Calculator from "./Temperature/Calculator";
+import Calculator from "./Temperature/Calculator";
 import TemperatureConversions from "./TemperatureConversions/TemperatureConversions";
-import CalculatorInput from "./FarenheitCelcius/CalculatorInput";
 // import Form from "./Components/Form";
 // import OnSelect from "./Components/Select";
 // import InputFile from "./Components/InputFile";
@@ -145,9 +144,8 @@ class App extends React.Component {
         {/* <InputFile /> */}
 
         <HiddenButtonLogic />
-        {/* <Calculator /> */}
+        <Calculator />
         <TemperatureConversions />
-        <CalculatorInput />
       </div>
     );
   }
