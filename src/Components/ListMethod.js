@@ -27,8 +27,9 @@ function ListMethod() {
       skills: "Java script"
     }
   ];
+
   const personList = persons.map(person => (
-    <h1>
+    <h1 key={person.id}>
       i am {person.name}. I am {person.age}. i am {person.skills}
     </h1>
   ));
