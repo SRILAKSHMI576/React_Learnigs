@@ -17,7 +17,8 @@ import TemperatureConversions from "./TemperatureConversions/TemperatureConversi
 // import ListMethod from "./Components/ListMethod";
 import FormHandling from "./Components/FormHandling";
 import LifeCycles from "./Components/LifeCycles";
-import PrevStateEx from "./Components/PrevStateEx";
+// import PrevStateEx from "./Components/PrevStateEx";
+import TextHoverCount from "./Components/TextHoverCount";
 
 // import NameChange from "./Components/NameChange";
 // import ShoppingCart from "./Components/ShoppingCart";
@@ -150,7 +151,8 @@ class App extends React.Component {
         {/* <Form /> */}
         {/* <OnSelect /> */}
         {/* <InputFile /> */}
-        <PrevStateEx />
+        {/* <PrevStateEx /> */}
+        <TextHoverCount />
         <HiddenButtonLogic />
         <Calculator />
         <TemperatureConversions />
