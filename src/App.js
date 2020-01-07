@@ -16,6 +16,11 @@ import TemperatureConversions from "./TemperatureConversions/TemperatureConversi
 // import Event from "./Components/Event";
 // import ListMethod from "./Components/ListMethod";
 import FormHandling from "./Components/FormHandling";
+import LifeCycles from "./Components/LifeCycles";
+import PrevStateEx from "./Components/PrevStateEx";
+
+// import NameChange from "./Components/NameChange";
+// import ShoppingCart from "./Components/ShoppingCart";
 // import Form from "./Components/Form";
 // import OnSelect from "./Components/Select";
 // import InputFile from "./Components/InputFile";
@@ -145,14 +150,17 @@ class App extends React.Component {
         {/* <Form /> */}
         {/* <OnSelect /> */}
         {/* <InputFile /> */}
-
+        <PrevStateEx />
         <HiddenButtonLogic />
         <Calculator />
         <TemperatureConversions />
         <FormHandling />
+        <LifeCycles />
         {/* <Alert /> */}
         {/* <Event /> */}
         {/* <ListMethod /> */}
+        {/* <NameChange /> */}
+        {/* <ShoppingCart /> */}
       </div>
     );
   }
