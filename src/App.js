@@ -16,10 +16,12 @@ import TemperatureConversions from "./TemperatureConversions/TemperatureConversi
 // import Event from "./Components/Event";
 // import ListMethod from "./Components/ListMethod";
 import FormHandling from "./Components/FormHandling";
-import LifeCycles from "./Components/LifeCycles";
-// import PrevStateEx from "./Components/PrevStateEx";
-import TextHoverCount from "./Components/TextHoverCount";
+import ButtonCounter from "./CounterEx/ButtonCounter";
+import TextCounter from "./CounterEx/TextCounter";
 
+// import LifeCycles from "./Components/LifeCycles";
+// import PrevStateEx from "./Components/PrevStateEx";
+// import TextHoverCount from "./Components/TextHoverCount";
 // import NameChange from "./Components/NameChange";
 // import ShoppingCart from "./Components/ShoppingCart";
 // import Form from "./Components/Form";
@@ -152,12 +154,14 @@ class App extends React.Component {
         {/* <OnSelect /> */}
         {/* <InputFile /> */}
         {/* <PrevStateEx /> */}
-        <TextHoverCount />
+        {/* <TextHoverCount /> */}
         <HiddenButtonLogic />
         <Calculator />
         <TemperatureConversions />
         <FormHandling />
-        <LifeCycles />
+        <ButtonCounter />
+        <TextCounter />
+        {/* <LifeCycles /> */}
         {/* <Alert /> */}
         {/* <Event /> */}
         {/* <ListMethod /> */}
