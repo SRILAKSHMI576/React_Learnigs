@@ -18,6 +18,8 @@ import TemperatureConversions from "./TemperatureConversions/TemperatureConversi
 import FormHandling from "./Components/FormHandling";
 import ButtonCounter from "./CounterEx/ButtonCounter";
 import TextCounter from "./CounterEx/TextCounter";
+import Srilakshmi from "./InputSubmit/Srilakshmi";
+import MyButton from "./DeleteContent/DeleteContent";
 
 // import LifeCycles from "./Components/LifeCycles";
 // import PrevStateEx from "./Components/PrevStateEx";
@@ -35,27 +37,27 @@ class App extends React.Component {
     persons: [
       { id: "asf1", name: "sri", age: 30 },
       { id: "abcse", name: "laxmi", age: 45 },
-      { id: "fghe", name: "max", age: 31 }
+      { id: "fghe", name: "max", age: 31 },
     ],
     otherState: "some other value",
-    showPersons: false
+    showPersons: false,
   };
-  switchHandler = switchName => {
+  switchHandler = (switchName) => {
     this.setState({
       persons: [
         { name: switchName, age: 60 },
         { name: "laxmi", age: 45 },
-        { name: "max", age: 35 }
-      ]
+        { name: "max", age: 35 },
+      ],
     });
   };
   nameChangeHandler = (event, id) => {
-    const personIndex = this.state.persons.findIndex(p => {
+    const personIndex = this.state.persons.findIndex((p) => {
       return p.id === id;
     });
 
     const person = {
-      ...this.state.persons[personIndex]
+      ...this.state.persons[personIndex],
     };
     person.name = event.target.value;
 
@@ -64,21 +66,21 @@ class App extends React.Component {
     // const person = Object.assign({}, this.state.persons[personIndex]);
 
     this.setState({
-      persons: persons
+      persons: persons,
     });
   };
 
   togglePersonsHandler = () => {
     const doesShow = this.state.showPersons;
     this.setState({
-      showPersons: !doesShow
+      showPersons: !doesShow,
     });
     this.setState({
-      showPersons: true
+      showPersons: true,
     });
   };
 
-  deletePersonHandler = personIndex => {
+  deletePersonHandler = (personIndex) => {
     const persons = [...this.state.persons];
     persons.splice(personIndex, 1);
     this.setState({ persons: persons });
@@ -90,7 +92,7 @@ class App extends React.Component {
       font: "inherit",
       border: "1px solid blue",
       padding: "18px",
-      cursor: "pointer"
+      cursor: "pointer",
     };
 
     let persons = null;
@@ -105,7 +107,7 @@ class App extends React.Component {
                 name={person.name}
                 age={person.age}
                 key={person.id}
-                change={event => this.nameChangeHandler(event, person.id)}
+                change={(event) => this.nameChangeHandler(event, person.id)}
               />
             );
           })}
@@ -141,10 +143,10 @@ class App extends React.Component {
         <Person />
         <Person />
         <ClassEx name1="REACT" /> */}
-        <button style={style} onClick={this.togglePersonsHandler}>
+        {/* <button style={style} onClick={this.togglePersonsHandler}>
           switch name
         </button>
-        {persons}
+        {persons} */}
         {/* <DateNow /> */}
         {/* <ButtonSwitch /> */}
         {/* <LogInControls /> */}
@@ -155,18 +157,20 @@ class App extends React.Component {
         {/* <InputFile /> */}
         {/* <PrevStateEx /> */}
         {/* <TextHoverCount /> */}
-        <HiddenButtonLogic />
+        {/* <HiddenButtonLogic />
         <Calculator />
         <TemperatureConversions />
         <FormHandling />
         <ButtonCounter />
-        <TextCounter />
+        <TextCounter /> */}
         {/* <LifeCycles /> */}
         {/* <Alert /> */}
         {/* <Event /> */}
         {/* <ListMethod /> */}
         {/* <NameChange /> */}
         {/* <ShoppingCart /> */}
+        {/* <Srilakshmi /> */}
+        {/* <MyButton /> */}
       </div>
     );
   }
